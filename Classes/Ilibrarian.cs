@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
+
 using System.Text;
-using System.Threading.Tasks;
+
 
 namespace LibraryApp.Classes
 {
@@ -10,6 +10,7 @@ namespace LibraryApp.Classes
     {
          bool addLibrarian(string userName, string password);
          bool deleteLibrarian(int ID);
-         bool editPassword(int ID, string existingPassword, string newPassword);
+         bool editPassword(int ID, string existingPassword, string newPassword);
+
     }
 }

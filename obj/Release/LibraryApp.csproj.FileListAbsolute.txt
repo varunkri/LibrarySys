@@ -1,0 +1,10 @@
+E:\Dev\LibraryApp\obj\Release\LibraryApp.csprojResolveAssemblyReference.cache
+E:\Dev\LibraryApp\obj\Release\LibraryApp.AddLibrarian.resources
+E:\Dev\LibraryApp\obj\Release\LibraryApp.Properties.Resources.resources
+E:\Dev\LibraryApp\obj\Release\LibraryApp.csproj.GenerateResource.Cache
+E:\Dev\LibraryApp\bin\Release\Database\LibraryApp.sdf
+E:\Dev\LibraryApp\bin\Release\LibraryApp.exe.config
+E:\Dev\LibraryApp\bin\Release\LibraryApp.exe
+E:\Dev\LibraryApp\bin\Release\LibraryApp.pdb
+E:\Dev\LibraryApp\obj\Release\LibraryApp.exe
+E:\Dev\LibraryApp\obj\Release\LibraryApp.pdb
