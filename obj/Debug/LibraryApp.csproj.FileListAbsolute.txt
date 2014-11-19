@@ -1,0 +1,2 @@
+C:\Users\Roadkill\AppData\Local\Temporary Projects\LibraryApp\bin\Debug\LibraryApp.exe.config
+E:\Dev\LibraryApp\bin\Debug\LibraryApp.exe.config
