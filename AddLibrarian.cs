@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 
 using System.Windows.Forms;
+using LibraryApp.Classes;
 
 namespace LibraryApp
 {
@@ -17,7 +18,9 @@ namespace LibraryApp
 
         private void Add_Click(object sender, EventArgs e)
         {
-
+            LibrarianControl lc = new LibrarianControl();
+            lc.addNewLibrarin(txtUsername.Text, txtPassword.Text);
+            MessageBox.Show(lc.Message);
         }
     }
 }

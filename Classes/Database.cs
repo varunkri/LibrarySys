@@ -6,9 +6,40 @@ using System.Data.SqlServerCe;
 
 
 namespace LibraryApp.Classes
-{
-    class Database
+{    //a singleton static class
+
+    class  Database
     {
+       private static Database instance;
+
+       private Database() { }
+
+       public static Database Instance
+       {
+           get
+           {
+               if (instance == null)
+               {
+                   instance = new Database();
+               }
+               return instance;
+           }
+       }
+
+        public bool addLibrarian(Librarian l)
+        {
+            SqlCeCommand sqlSt = new SqlCeCommand();
+            sqlSt.CommandText =
+                "INSERT INTO Librarian ( [username],[password]) " +
+                "VALUES(@username,@password)";
+            sqlSt.Parameters.Add(new SqlCeParameter("username", l.Username));
+            sqlSt.Parameters.Add(new SqlCeParameter("password", l.Password));
+
+            int ID = runCommandScalar(sqlSt);
+            l.Id = ID;
+            return true;
+        }
+
         public bool runCommand(SqlCeCommand command)
         {
             SqlCeConnection conn = null;

@@ -1,7 +1,5 @@
 C:\Users\Roadkill\AppData\Local\Temporary Projects\LibraryApp\bin\Debug\LibraryApp.exe.config
 E:\Dev\LibraryApp\bin\Debug\LibraryApp.exe.config
-E:\Dev\LibraryApp\bin\Debug\EntityFramework.dll
-E:\Dev\LibraryApp\bin\Debug\EntityFramework.xml
 E:\Dev\LibraryApp\obj\Debug\LibraryApp.csprojResolveAssemblyReference.cache
 E:\Dev\LibraryApp\obj\Debug\LibraryApp.AddLibrarian.resources
 E:\Dev\LibraryApp\obj\Debug\LibraryApp.Properties.Resources.resources
