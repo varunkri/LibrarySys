@@ -9,3 +9,10 @@ E:\Dev\LibraryApp\obj\Debug\LibraryApp.pdb
 E:\Dev\LibraryApp\bin\Debug\Database\LibraryApp.sdf
 E:\Dev\LibraryApp\bin\Debug\LibraryApp.exe
 E:\Dev\LibraryApp\bin\Debug\LibraryApp.pdb
+C:\Users\Chen\Documents\GitHub\LibrarySys\bin\Debug\LibraryApp.exe.config
+C:\Users\Chen\Documents\GitHub\LibrarySys\obj\Debug\LibraryApp.exe
+C:\Users\Chen\Documents\GitHub\LibrarySys\obj\Debug\LibraryApp.pdb
+C:\Users\Chen\Documents\GitHub\LibrarySys\obj\Debug\LibraryApp.csprojResolveAssemblyReference.cache
+C:\Users\Chen\Documents\GitHub\LibrarySys\obj\Debug\LibraryApp.AddLibrarian.resources
+C:\Users\Chen\Documents\GitHub\LibrarySys\obj\Debug\LibraryApp.Properties.Resources.resources
+C:\Users\Chen\Documents\GitHub\LibrarySys\obj\Debug\LibraryApp.csproj.GenerateResource.Cache
