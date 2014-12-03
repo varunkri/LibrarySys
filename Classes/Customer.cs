@@ -55,27 +55,58 @@ namespace LibraryApp.Classes
             Database db = Database.Instance;
             this.username = userName;
             this.password = password;
-            return db.addCustomer(this);
+          //  return db.addCustomer(this);
+            throw new NotImplementedException();
         }
         public bool editPassword(int ID, string existingPassword, string newPassword)
         {
             Database db=Database.Instance;
             this.password=existingPassword;
             this.password=newPassword;
-            return db.editPassword(this);
+          //  return db.editPassword(this);
+            throw new NotImplementedException();
         }
-        public bool blackListCustomer(int ID);
+        public void blackListCustomer(int ID)
         {
-            return true;
+            throw new NotImplementedException();
         }
-        public int getBooksBorrowedCount(int ID);
+        public int getBooksBorrowedCount(int ID)
         {
-            return true;
+            throw new NotImplementedException();
         }
-        public float getPenalty(int ID);
+        public float getPenalty(int ID)
         {
-            return true;
+            throw new NotImplementedException();
         }
+        #endregion
+
+        #region Icustomer Members
+
+        bool Icustomer.addCustomer(string name, string idNumber, string phone, string userName, string password)
+        {
+            throw new NotImplementedException();
+        }
+
+        bool Icustomer.editPassword(int ID, string existingPassword, string newPassword)
+        {
+            throw new NotImplementedException();
+        }
+
+        void Icustomer.blackListCustomer(int ID)
+        {
+            throw new NotImplementedException();
+        }
+
+        int Icustomer.getBooksBorrowedCount(int ID)
+        {
+            throw new NotImplementedException();
+        }
+
+        float Icustomer.getPenalty(int ID)
+        {
+            throw new NotImplementedException();
+        }
+
         #endregion
     }
 }

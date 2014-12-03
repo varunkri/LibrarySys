@@ -4,25 +4,26 @@ using System.Text;
 
 namespace LibraryApp.Classes
 {
-    class BookControl
+    internal class BookControl
     {
         public string Message;
         private bool success = false;
-        public  BookControl()
+
+        public BookControl()
         {
-            
+
         }
 
-        public  bool addNewBook(string isbn,string author,string title,string genre)
+        public bool addNewBook(string isbn, string author, string title, string genre)
         {
             //check if librarian exists
             //
             //
 
             //if not
-            Book  b = new Book();
+            Book b = new Book();
 
-            if(l.addBook(title, author, isbn, genre))
+            if (b.addBook(title, author, isbn, genre))
             {
                 success = true;
                 Message = "Book Added Successfully.";
@@ -34,6 +35,5 @@ namespace LibraryApp.Classes
             return success;
 
         }
-    }
     }
 }

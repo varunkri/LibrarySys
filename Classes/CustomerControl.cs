@@ -8,14 +8,14 @@ using System.Windows.Forms;
 
 namespace LibraryApp.Classes
 {
-    public partial class UserControl1
+    public partial class CustomerControl
     {
         public string Message;
         private bool success = false;
-        
-        public UserControl1()
+
+        public CustomerControl()
         {
-            InitializeComponent();
+           
         }
 
 

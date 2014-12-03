@@ -52,19 +52,18 @@ namespace LibraryApp.Classes
             set { ID = value; }
         }
 
-        #region Ibook Members
 
-        public bool addBook(string title, string author, string isbn, string genre);
+        public bool addBook(string title, string author, string isbn, string genre)
         {
             Database db = Database.Instance;
             this.title =title ;
             this.author= author ;
             this.isbn = isbn;
             this.genre =genre ;
-            return db.addBook(this);
+          //  return db.addBook(this);
+            throw new NotImplementedException();
         }
 
-        #region Ibook Members
 
         public bool deleteBook(string title, string author, string isbn, string genre)
         {
@@ -75,23 +74,23 @@ namespace LibraryApp.Classes
         {
             throw new NotImplementedException();
         }
-        Array<Book> searchBook(string title, string author, string isbn);
+        List<Book> searchBook(string title, string author, string isbn)
         {
             throw new NotImplementedException();
         }
-        bool borrowBook(int ID, Customer borrower);
+        bool borrowBook(int ID, Customer borrower)
         {
             throw new NotImplementedException();
         }
-        bool returnBook(int ID, Customer borrower);
+        bool returnBook(int ID, Customer borrower)
         {
             throw new NotImplementedException();
         }
-        bool renewBook(int ID, Customer borrower);
+        bool renewBook(int ID, Customer borrower)
         {
             throw new NotImplementedException();
         }
 
-        #endregion
+      
     }
 }

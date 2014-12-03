@@ -16,3 +16,4 @@ C:\Users\Chen\Documents\GitHub\LibrarySys\obj\Debug\LibraryApp.csprojResolveAsse
 C:\Users\Chen\Documents\GitHub\LibrarySys\obj\Debug\LibraryApp.AddLibrarian.resources
 C:\Users\Chen\Documents\GitHub\LibrarySys\obj\Debug\LibraryApp.Properties.Resources.resources
 C:\Users\Chen\Documents\GitHub\LibrarySys\obj\Debug\LibraryApp.csproj.GenerateResource.Cache
+E:\Dev\LibraryApp\obj\Debug\LibraryApp.Classes.AddBook.resources

@@ -9,7 +9,7 @@ namespace LibraryApp.Classes
         bool addBook(string title, string author, string isbn, string genre);
         bool editBook(int ID, string title, string author, string isbn, string genre);
         bool deleteBook(int ID);
-        Array<Book> searchBook(string title, string author, string isbn);
+        List<Book> searchBook(string title, string author, string isbn);
         bool borrowBook(int ID, Customer borrower);
         bool returnBook(int ID, Customer borrower);
         bool renewBook(int ID, Customer borrower);

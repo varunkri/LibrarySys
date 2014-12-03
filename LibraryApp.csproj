@@ -81,7 +81,13 @@
     <Compile Include="AddBook.Designer.cs">
       <DependentUpon>AddBook.cs</DependentUpon>
     </Compile>
+    <Compile Include="Classes\Book.cs" />
+    <Compile Include="Classes\BookControl.cs" />
+    <Compile Include="Classes\Customer.cs" />
+    <Compile Include="Classes\CustomerControl.cs" />
     <Compile Include="Classes\Database.cs" />
+    <Compile Include="Classes\Ibook.cs" />
+    <Compile Include="Classes\Icustomer.cs" />
     <Compile Include="Classes\Ilibrarian.cs" />
     <Compile Include="Classes\Librarian.cs" />
     <Compile Include="Classes\LibrarianControl.cs" />
