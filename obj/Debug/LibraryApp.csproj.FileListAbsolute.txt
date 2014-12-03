@@ -18,3 +18,12 @@ C:\Users\Chen\Documents\GitHub\LibrarySys\obj\Debug\LibraryApp.Properties.Resour
 C:\Users\Chen\Documents\GitHub\LibrarySys\obj\Debug\LibraryApp.csproj.GenerateResource.Cache
 E:\Dev\LibraryApp\obj\Debug\LibraryApp.Classes.AddBook.resources
 E:\Dev\LibraryApp\obj\Debug\LibraryApp.SearchBook.resources
+C:\Users\Chen\Documents\GitHub\LibrarySys\bin\Debug\Database\LibraryApp.sdf
+C:\Users\Chen\Documents\GitHub\LibrarySys\bin\Debug\LibraryApp.exe
+C:\Users\Chen\Documents\GitHub\LibrarySys\bin\Debug\LibraryApp.pdb
+C:\Users\Chen\Documents\GitHub\LibrarySys\obj\Debug\LibraryApp.Classes.AddBook.resources
+C:\Users\Chen\Documents\GitHub\LibrarySys\obj\Debug\LibraryApp.LibrarianMenu.resources
+C:\Users\Chen\Documents\GitHub\LibrarySys\obj\Debug\LibraryApp.SearchBook.resources
+C:\Users\Chen\Documents\GitHub\LibrarySys\obj\Debug\LibraryApp.WelcomePage.resources
+C:\Users\Chen\Documents\GitHub\LibrarySys\bin\Debug\EntityFramework.dll
+C:\Users\Chen\Documents\GitHub\LibrarySys\bin\Debug\EntityFramework.xml
