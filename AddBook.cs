@@ -17,7 +17,9 @@ namespace LibraryApp.Classes
 
         private void addBtn_Click(object sender, EventArgs e)
         {
-            
+            BookControl bc = new BookControl();
+            bc.addNewBook(isbnText.Text, authorText.Text, titleText.Text, genreText.Text);
+            MessageBox.Show(bc.Message);
         }
     }
 }

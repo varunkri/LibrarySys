@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Text;
 
 namespace LibraryApp.Classes
@@ -60,8 +61,8 @@ namespace LibraryApp.Classes
             this.author= author ;
             this.isbn = isbn;
             this.genre =genre ;
-          //  return db.addBook(this);
-            throw new NotImplementedException();
+            return db.addBook(this);
+          
         }
 
 
@@ -74,9 +75,23 @@ namespace LibraryApp.Classes
         {
             throw new NotImplementedException();
         }
-        List<Book> searchBook(string title, string author, string isbn)
+        public List<Book> searchBook(string title, string author, string isbn)
         {
-            throw new NotImplementedException();
+            Database db = Database.Instance;
+            DataTable dt = db.searchBook(title, author, isbn);
+            List<Book> bkList = new List<Book>();
+            foreach (DataRow dr in dt.Rows)
+            {
+                Book b = new Book();
+                b.title = dr["title"].ToString();
+                b.author = dr["author"].ToString();
+                b.isbn = dr["isbn"].ToString();
+                b.genre = dr["genre"].ToString();
+                b.Id = int.Parse(dr["id"].ToString());
+                bkList.Add(b);
+
+            }
+            return bkList;
         }
         bool borrowBook(int ID, Customer borrower)
         {

@@ -16,11 +16,7 @@ namespace LibraryApp.Classes
 
         public bool addNewBook(string isbn, string author, string title, string genre)
         {
-            //check if librarian exists
-            //
-            //
-
-            //if not
+            
             Book b = new Book();
 
             if (b.addBook(title, author, isbn, genre))
@@ -33,6 +29,13 @@ namespace LibraryApp.Classes
                 Message = "An error occurred.";
             }
             return success;
+
+        }
+
+        public List<Book> searchBook(string title, string author, string isbn)
+        {
+            Book book = new Book();
+            return book.searchBook(title, author, isbn);
 
         }
     }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 
 using System.Windows.Forms;
+using LibraryApp.Classes;
 
 namespace LibraryApp
 {
@@ -15,7 +16,7 @@ namespace LibraryApp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new AddLibrarian());
+            Application.Run(new SearchBook());
         }
     }
 }

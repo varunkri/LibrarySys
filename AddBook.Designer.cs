@@ -37,11 +37,13 @@
             this.genreText = new System.Windows.Forms.TextBox();
             this.isbnText = new System.Windows.Forms.TextBox();
             this.authorText = new System.Windows.Forms.TextBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // addBtn
             // 
-            this.addBtn.Location = new System.Drawing.Point(316, 421);
+            this.addBtn.Location = new System.Drawing.Point(268, 334);
             this.addBtn.Name = "addBtn";
             this.addBtn.Size = new System.Drawing.Size(75, 23);
             this.addBtn.TabIndex = 0;
@@ -52,7 +54,7 @@
             // title
             // 
             this.title.AutoSize = true;
-            this.title.Location = new System.Drawing.Point(86, 162);
+            this.title.Location = new System.Drawing.Point(38, 75);
             this.title.Name = "title";
             this.title.Size = new System.Drawing.Size(27, 13);
             this.title.TabIndex = 1;
@@ -61,7 +63,7 @@
             // author
             // 
             this.author.AutoSize = true;
-            this.author.Location = new System.Drawing.Point(86, 207);
+            this.author.Location = new System.Drawing.Point(38, 120);
             this.author.Name = "author";
             this.author.Size = new System.Drawing.Size(38, 13);
             this.author.TabIndex = 2;
@@ -70,7 +72,7 @@
             // isbn
             // 
             this.isbn.AutoSize = true;
-            this.isbn.Location = new System.Drawing.Point(86, 249);
+            this.isbn.Location = new System.Drawing.Point(38, 162);
             this.isbn.Name = "isbn";
             this.isbn.Size = new System.Drawing.Size(32, 13);
             this.isbn.TabIndex = 3;
@@ -79,7 +81,7 @@
             // genre
             // 
             this.genre.AutoSize = true;
-            this.genre.Location = new System.Drawing.Point(86, 292);
+            this.genre.Location = new System.Drawing.Point(38, 205);
             this.genre.Name = "genre";
             this.genre.Size = new System.Drawing.Size(36, 13);
             this.genre.TabIndex = 4;
@@ -87,50 +89,61 @@
             // 
             // titleText
             // 
-            this.titleText.Location = new System.Drawing.Point(233, 159);
+            this.titleText.Location = new System.Drawing.Point(185, 72);
             this.titleText.Name = "titleText";
             this.titleText.Size = new System.Drawing.Size(259, 20);
             this.titleText.TabIndex = 5;
             // 
             // genreText
             // 
-            this.genreText.Location = new System.Drawing.Point(233, 289);
+            this.genreText.Location = new System.Drawing.Point(185, 202);
             this.genreText.Name = "genreText";
             this.genreText.Size = new System.Drawing.Size(259, 20);
             this.genreText.TabIndex = 6;
             // 
             // isbnText
             // 
-            this.isbnText.Location = new System.Drawing.Point(233, 246);
+            this.isbnText.Location = new System.Drawing.Point(185, 159);
             this.isbnText.Name = "isbnText";
             this.isbnText.Size = new System.Drawing.Size(259, 20);
             this.isbnText.TabIndex = 7;
             // 
             // authorText
             // 
-            this.authorText.Location = new System.Drawing.Point(233, 204);
+            this.authorText.Location = new System.Drawing.Point(185, 117);
             this.authorText.Name = "authorText";
             this.authorText.Size = new System.Drawing.Size(259, 20);
             this.authorText.TabIndex = 8;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.authorText);
+            this.groupBox1.Controls.Add(this.isbnText);
+            this.groupBox1.Controls.Add(this.genreText);
+            this.groupBox1.Controls.Add(this.titleText);
+            this.groupBox1.Controls.Add(this.genre);
+            this.groupBox1.Controls.Add(this.isbn);
+            this.groupBox1.Controls.Add(this.author);
+            this.groupBox1.Controls.Add(this.title);
+            this.groupBox1.Controls.Add(this.addBtn);
+            this.groupBox1.Location = new System.Drawing.Point(48, 87);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(651, 390);
+            this.groupBox1.TabIndex = 9;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Add a Book";
             // 
             // AddBook
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 562);
-            this.Controls.Add(this.authorText);
-            this.Controls.Add(this.isbnText);
-            this.Controls.Add(this.genreText);
-            this.Controls.Add(this.titleText);
-            this.Controls.Add(this.genre);
-            this.Controls.Add(this.isbn);
-            this.Controls.Add(this.author);
-            this.Controls.Add(this.title);
-            this.Controls.Add(this.addBtn);
+            this.Controls.Add(this.groupBox1);
             this.Name = "AddBook";
             this.Text = "AddBook";
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -145,5 +158,6 @@
         private System.Windows.Forms.TextBox genreText;
         private System.Windows.Forms.TextBox isbnText;
         private System.Windows.Forms.TextBox authorText;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }

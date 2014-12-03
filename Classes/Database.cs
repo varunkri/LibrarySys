@@ -26,6 +26,35 @@ namespace LibraryApp.Classes
            }
        }
 
+        public  DataTable searchBook(string title, string author, string isbn)
+        {
+            SqlCeCommand sqlSt = new SqlCeCommand();
+            sqlSt.CommandText = "select * from book where " +
+                                " ('" + title + "' = '' or title like '%" + title + "%') " +
+                                " and ('" + author + "' = '' or author like '%" + author + "%') " +
+                                " and ('" + isbn + "' = '' or isbn like '%" + isbn + "%') ";
+
+
+          
+
+            return readTable(sqlSt);
+        }
+
+        public  bool addBook(Book b)
+        {
+            SqlCeCommand sqlSt = new SqlCeCommand();
+            sqlSt.CommandText =
+                "INSERT INTO Book ( [title],[author],[isbn],[genre]) " +
+                "VALUES(@title,@author,@isbn,@genre)";
+            sqlSt.Parameters.Add(new SqlCeParameter("title", b.Title));
+            sqlSt.Parameters.Add(new SqlCeParameter("author", b.Author));
+            sqlSt.Parameters.Add(new SqlCeParameter("isbn", b.Isbn));
+            sqlSt.Parameters.Add(new SqlCeParameter("genre", b.Genre));
+            int ID = runCommandScalar(sqlSt);
+            b.Id = ID;
+            return true;
+        }
+
         public bool addLibrarian(Librarian l)
         {
             SqlCeCommand sqlSt = new SqlCeCommand();
