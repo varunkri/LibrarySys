@@ -16,7 +16,11 @@ namespace LibraryApp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+<<<<<<< HEAD
             Application.Run(new AddBook());
+=======
+            Application.Run(new WelcomePage());
+>>>>>>> 528bf7ae81a758427f390978374745d595146d2a
         }
     }
 }
