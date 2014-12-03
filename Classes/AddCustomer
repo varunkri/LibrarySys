@@ -1,0 +1,81 @@
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace LibraryApp.Classes
+{
+    class Customer: Icustomer
+    {
+        private string name;
+        private string username;
+        private string password;
+        private string idnum;
+        private string phone;
+        private int ID;
+        public Customer()
+        {
+        }
+        
+        public Customer(int id)
+        {
+            this.ID = id;
+        }
+        public string Idnum
+        {
+            get { return idnum; }
+            set { idnum = value; }
+        }
+        public string Name
+        {
+            get { return name; }
+            set { name = value; }
+        }
+
+        public string Username
+        {
+            get { return username; }
+            set { username = value; }
+        }
+
+        public string Password
+        {
+            get { return password; }
+            set { password = value; }
+        }
+        public int Id
+        {
+            get { return ID; }
+            set { ID = value; }
+        }
+
+        #region Icustomer Members
+
+        public bool addCustomer(string userName, string password)
+        {
+            Database db = Database.Instance;
+            this.username = userName;
+            this.password = password;
+            return db.addCustomer(this);
+        }
+        public bool editPassword(int ID, string existingPassword, string newPassword)
+        {
+            Database db=Database.Instance;
+            this.password=existingPassword;
+            this.password=newPassword;
+            return db.editPassword(this);
+        }
+        public bool blackListCustomer(int ID);
+        {
+            return true;
+        }
+        public int getBooksBorrowedCount(int ID);
+        {
+            return true;
+        }
+        public float getPenalty(int ID);
+        {
+            return true;
+        }
+        #endregion
+    }
+}

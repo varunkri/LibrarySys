@@ -8,3 +8,13 @@ E:\Dev\LibraryApp\bin\Release\LibraryApp.exe
 E:\Dev\LibraryApp\bin\Release\LibraryApp.pdb
 E:\Dev\LibraryApp\obj\Release\LibraryApp.exe
 E:\Dev\LibraryApp\obj\Release\LibraryApp.pdb
+C:\Users\Chen\Documents\GitHub\LibrarySys\bin\Release\LibraryApp.exe.config
+C:\Users\Chen\Documents\GitHub\LibrarySys\obj\Release\LibraryApp.exe
+C:\Users\Chen\Documents\GitHub\LibrarySys\obj\Release\LibraryApp.pdb
+C:\Users\Chen\Documents\GitHub\LibrarySys\bin\Release\Database\LibraryApp.sdf
+C:\Users\Chen\Documents\GitHub\LibrarySys\bin\Release\LibraryApp.exe
+C:\Users\Chen\Documents\GitHub\LibrarySys\bin\Release\LibraryApp.pdb
+C:\Users\Chen\Documents\GitHub\LibrarySys\obj\Release\LibraryApp.csprojResolveAssemblyReference.cache
+C:\Users\Chen\Documents\GitHub\LibrarySys\obj\Release\LibraryApp.AddLibrarian.resources
+C:\Users\Chen\Documents\GitHub\LibrarySys\obj\Release\LibraryApp.Properties.Resources.resources
+C:\Users\Chen\Documents\GitHub\LibrarySys\obj\Release\LibraryApp.csproj.GenerateResource.Cache
