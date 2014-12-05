@@ -35,3 +35,8 @@ E:\Dev\LibraryApp\bin\Debug\LibraryApp.exe.manifest
 E:\Dev\LibraryApp\bin\Debug\LibraryApp.application
 E:\Dev\LibraryApp\obj\Debug\LibraryApp.exe.manifest
 E:\Dev\LibraryApp\obj\Debug\LibraryApp.application
+C:\Users\Chen\Documents\GitHub\LibrarySys\bin\Debug\LibraryApp.exe.manifest
+C:\Users\Chen\Documents\GitHub\LibrarySys\bin\Debug\LibraryApp.application
+C:\Users\Chen\Documents\GitHub\LibrarySys\obj\Debug\LibraryApp.exe.manifest
+C:\Users\Chen\Documents\GitHub\LibrarySys\obj\Debug\LibraryApp.application
+C:\Users\Chen\Documents\GitHub\LibrarySys\obj\Debug\LibraryApp.CustomerReg.resources

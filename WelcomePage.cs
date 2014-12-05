@@ -15,15 +15,23 @@ namespace LibraryApp
             InitializeComponent();
         }
 
-        private void customerBtn_Click(object sender, EventArgs e)
+        private void WelcomePage_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void LibrarianBtn_Click(object sender, EventArgs e)
+        private void newCustomerLabel_Click(object sender, EventArgs e)
         {
-            LibrarianMenu libMenu = new LibrarianMenu();
-            libMenu.Show();
+            CustomerReg customerReg = new CustomerReg();
+            customerReg.Show();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            SearchBook searchBook = new SearchBook();
+            searchBook.Show();
+        }
+
+
     }
 }

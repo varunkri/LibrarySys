@@ -16,7 +16,8 @@ namespace LibraryApp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new SearchBook());
+            Application.Run(new WelcomePage());
+            //Application.Run(new SearchBook());
 
         }
     }

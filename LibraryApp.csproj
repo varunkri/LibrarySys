@@ -105,6 +105,12 @@
     <Compile Include="Classes\Ilibrarian.cs" />
     <Compile Include="Classes\Librarian.cs" />
     <Compile Include="Classes\LibrarianControl.cs" />
+    <Compile Include="CustomerReg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerReg.Designer.cs">
+      <DependentUpon>CustomerReg.cs</DependentUpon>
+    </Compile>
     <Compile Include="LibrarianMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -130,6 +136,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AddLibrarian.resx">
       <DependentUpon>AddLibrarian.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerReg.resx">
+      <DependentUpon>CustomerReg.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LibrarianMenu.resx">
       <DependentUpon>LibrarianMenu.cs</DependentUpon>
