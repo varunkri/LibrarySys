@@ -40,6 +40,22 @@ namespace LibraryApp.Classes
             return readTable(sqlSt);
         }
 
+        public bool editBook(Book b)
+        {
+            SqlCeCommand sqlSt = new SqlCeCommand();
+            sqlSt.CommandText =
+                "Update Book  set [title] = @title,[author] = @author ,[isbn] = @isbn,[genre] = @genre " +
+                " WHERE ID= @ID";
+            sqlSt.Parameters.Add(new SqlCeParameter("title", b.Title));
+            sqlSt.Parameters.Add(new SqlCeParameter("author", b.Author));
+            sqlSt.Parameters.Add(new SqlCeParameter("isbn", b.Isbn));
+            sqlSt.Parameters.Add(new SqlCeParameter("genre", b.Genre));
+            sqlSt.Parameters.Add(new SqlCeParameter("ID", b.Id));
+
+            bool success = runCommand(sqlSt);
+            return success;
+        }
+
         public  bool addBook(Book b)
         {
             SqlCeCommand sqlSt = new SqlCeCommand();

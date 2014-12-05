@@ -14,6 +14,24 @@ namespace LibraryApp.Classes
 
         }
 
+        public bool editBook(int ID,string isbn, string author, string title, string genre)
+        {
+
+            Book b = new Book();
+
+            if (b.editBook(ID,title, author, isbn, genre))
+            {
+                success = true;
+                Message = "Book Edited Successfully.";
+            }
+            else
+            {
+                Message = "An error occurred.";
+            }
+            return success;
+
+        }
+
         public bool addNewBook(string isbn, string author, string title, string genre)
         {
             

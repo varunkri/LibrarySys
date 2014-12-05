@@ -27,5 +27,11 @@ namespace LibraryApp
             AddBook ab = new AddBook();
             ab.Show();
         }
+
+        private void searchBookBtn_Click(object sender, EventArgs e)
+        {
+            SearchBook sb = new SearchBook();
+            sb.Show();
+        }
     }
 }

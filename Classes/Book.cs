@@ -5,7 +5,7 @@ using System.Text;
 
 namespace LibraryApp.Classes
 {
-    class Book
+    class Book: Ibook
     {
         private string author;
         private string title;
@@ -66,14 +66,20 @@ namespace LibraryApp.Classes
         }
 
 
-        public bool deleteBook(string title, string author, string isbn, string genre)
+        public bool deleteBook(int ID)
         {
             throw new NotImplementedException();
         }
 
-        public bool editBook(int ID, string existingPassword, string newPassword)
+       public bool editBook(int ID, string title, string author, string isbn, string genre)
         {
-            throw new NotImplementedException();
+            Database db = Database.Instance;
+            this.title = title;
+            this.author = author;
+            this.isbn = isbn;
+            this.genre = genre;
+            this.Id = ID;
+            return db.editBook(this);
         }
         public List<Book> searchBook(string title, string author, string isbn)
         {
@@ -93,15 +99,15 @@ namespace LibraryApp.Classes
             }
             return bkList;
         }
-        bool borrowBook(int ID, Customer borrower)
+        public bool borrowBook(int ID, Customer borrower)
         {
             throw new NotImplementedException();
         }
-        bool returnBook(int ID, Customer borrower)
+        public bool returnBook(int ID, Customer borrower)
         {
             throw new NotImplementedException();
         }
-        bool renewBook(int ID, Customer borrower)
+        public bool renewBook(int ID, Customer borrower)
         {
             throw new NotImplementedException();
         }

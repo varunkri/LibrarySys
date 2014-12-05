@@ -82,6 +82,7 @@
             this.searchBookBtn.TabStop = false;
             this.searchBookBtn.Text = "Search books";
             this.searchBookBtn.UseVisualStyleBackColor = true;
+            this.searchBookBtn.Click += new System.EventHandler(this.searchBookBtn_Click);
             // 
             // addBookBtn
             // 

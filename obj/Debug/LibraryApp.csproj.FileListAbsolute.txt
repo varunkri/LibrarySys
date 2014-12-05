@@ -27,3 +27,11 @@ C:\Users\Chen\Documents\GitHub\LibrarySys\obj\Debug\LibraryApp.SearchBook.resour
 C:\Users\Chen\Documents\GitHub\LibrarySys\obj\Debug\LibraryApp.WelcomePage.resources
 C:\Users\Chen\Documents\GitHub\LibrarySys\bin\Debug\EntityFramework.dll
 C:\Users\Chen\Documents\GitHub\LibrarySys\bin\Debug\EntityFramework.xml
+E:\Dev\LibraryApp\bin\Debug\EntityFramework.dll
+E:\Dev\LibraryApp\bin\Debug\EntityFramework.xml
+E:\Dev\LibraryApp\obj\Debug\LibraryApp.LibrarianMenu.resources
+E:\Dev\LibraryApp\obj\Debug\LibraryApp.WelcomePage.resources
+E:\Dev\LibraryApp\bin\Debug\LibraryApp.exe.manifest
+E:\Dev\LibraryApp\bin\Debug\LibraryApp.application
+E:\Dev\LibraryApp\obj\Debug\LibraryApp.exe.manifest
+E:\Dev\LibraryApp\obj\Debug\LibraryApp.application
