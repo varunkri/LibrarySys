@@ -40,6 +40,17 @@ namespace LibraryApp.Classes
             return readTable(sqlSt);
         }
 
+        public bool deleteBook(Book b)
+        {
+            SqlCeCommand sqlSt = new SqlCeCommand();
+            sqlSt.CommandText =
+                "delete from Book  " +
+                " WHERE ID= @ID";
+            sqlSt.Parameters.Add(new SqlCeParameter("ID", b.Id));
+            bool success = runCommand(sqlSt);
+            return success;
+        }
+
         public bool editBook(Book b)
         {
             SqlCeCommand sqlSt = new SqlCeCommand();

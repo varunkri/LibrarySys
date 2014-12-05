@@ -44,12 +44,18 @@
             this.isbn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bookList)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.isbnText);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.authorText);
@@ -125,7 +131,6 @@
             // bookList
             // 
             this.bookList.AllowUserToAddRows = false;
-            this.bookList.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -150,6 +155,7 @@
             this.bookList.TabIndex = 1;
             this.bookList.CellBeginEdit += new System.Windows.Forms.DataGridViewCellCancelEventHandler(this.bookList_CellBeginEdit);
             this.bookList.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.bookList_CellEndEdit);
+            this.bookList.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.bookList_UserDeletingRow);
             // 
             // title
             // 
@@ -193,6 +199,36 @@
             this.ID.Name = "ID";
             this.ID.Visible = false;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(488, 39);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(40, 16);
+            this.label3.TabIndex = 13;
+            this.label3.Text = "TIP: ";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(500, 55);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(251, 15);
+            this.label4.TabIndex = 14;
+            this.label4.Text = "Click on a cell and press F12 to edit the value";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(500, 77);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(269, 15);
+            this.label5.TabIndex = 15;
+            this.label5.Text = "Click on a cell and press delete to delete the row";
+            // 
             // SearchBook
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -226,5 +262,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn isbn;
         private System.Windows.Forms.DataGridViewButtonColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
     }
 }

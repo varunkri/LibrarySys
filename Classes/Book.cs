@@ -68,7 +68,9 @@ namespace LibraryApp.Classes
 
         public bool deleteBook(int ID)
         {
-            throw new NotImplementedException();
+            Database db = Database.Instance;
+            this.Id = ID;
+            return db.deleteBook(this);
         }
 
        public bool editBook(int ID, string title, string author, string isbn, string genre)

@@ -91,5 +91,16 @@ namespace LibraryApp
             style.ForeColor = Color.Black;
            bookList.Rows[e.RowIndex].Cells[e.ColumnIndex].Style = style;
         }
+
+        private void bookList_UserDeletingRow(object sender, DataGridViewRowCancelEventArgs e)
+        {
+            string id = bookList.Rows[e.Row.Index].Cells["ID"].Value.ToString(); 
+            BookControl bc = new BookControl();
+            bc.deleteBook(int.Parse(id));
+            MessageBox.Show(bc.Message);
+
+        }
+
+        
     }
 }

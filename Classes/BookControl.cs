@@ -14,6 +14,24 @@ namespace LibraryApp.Classes
 
         }
 
+        public bool deleteBook(int ID)
+        {
+
+            Book b = new Book();
+
+            if (b.deleteBook(ID))
+            {
+                success = true;
+                Message = "Book Deleted Successfully.";
+            }
+            else
+            {
+                Message = "An error occurred.";
+            }
+            return success;
+
+        }
+
         public bool editBook(int ID,string isbn, string author, string title, string genre)
         {
 
