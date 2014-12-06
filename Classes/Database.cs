@@ -29,7 +29,7 @@ namespace LibraryApp.Classes
        {
            SqlCeCommand sqlSt = new SqlCeCommand();
            sqlSt.CommandText = "update bookborrow set timesRenewed=timesRenewed+1, DueDate='" + newDueDate + "'" +
-                               "  where  bookID=" + bookid + " and CustomerID=" + borrower.Id;
+                               "  where returned=0 and  bookID=" + bookid + " and CustomerID=" + borrower.Id;
 
 
 
@@ -40,7 +40,7 @@ namespace LibraryApp.Classes
        {
            SqlCeCommand sqlSt = new SqlCeCommand();
            sqlSt.CommandText = "update bookborrow set returned=1, DateReturned='" + DateTime.Now.Date + "'" +
-                               " ,penaltyImposed=" + penaltyImposed + " where  bookID=" + bookid + " and CustomerID=" + borrower.Id;
+                               " ,penaltyImposed=" + penaltyImposed + " where returned=0 and   bookID=" + bookid + " and CustomerID=" + borrower.Id;
 
 
 
