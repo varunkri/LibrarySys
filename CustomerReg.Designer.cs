@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.password = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.phone = new System.Windows.Forms.TextBox();
             this.idNumber = new System.Windows.Forms.TextBox();
@@ -38,8 +40,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.password = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -63,6 +63,22 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Customer Register";
             // 
+            // password
+            // 
+            this.password.Location = new System.Drawing.Point(106, 140);
+            this.password.Name = "password";
+            this.password.Size = new System.Drawing.Size(288, 20);
+            this.password.TabIndex = 4;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(6, 143);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(95, 13);
+            this.label5.TabIndex = 18;
+            this.label5.Text = "Create a password";
+            // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(319, 217);
@@ -71,6 +87,7 @@
             this.button1.TabIndex = 5;
             this.button1.Text = "Add";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // phone
             // 
@@ -136,22 +153,6 @@
             this.label1.TabIndex = 9;
             this.label1.Text = "Name";
             // 
-            // password
-            // 
-            this.password.Location = new System.Drawing.Point(106, 140);
-            this.password.Name = "password";
-            this.password.Size = new System.Drawing.Size(288, 20);
-            this.password.TabIndex = 4;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(6, 143);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(95, 13);
-            this.label5.TabIndex = 18;
-            this.label5.Text = "Create a password";
-            // 
             // CustomerReg
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -159,7 +160,9 @@
             this.ClientSize = new System.Drawing.Size(784, 562);
             this.Controls.Add(this.groupBox1);
             this.Name = "CustomerReg";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CustomerReg";
+            this.Load += new System.EventHandler(this.CustomerReg_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

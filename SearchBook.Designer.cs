@@ -30,6 +30,10 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.tipsPanel = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.isbnText = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.authorText = new System.Windows.Forms.TextBox();
@@ -39,23 +43,21 @@
             this.lblTitle = new System.Windows.Forms.Label();
             this.bookList = new System.Windows.Forms.DataGridView();
             this.title = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.availablebool = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.author = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.genre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.isbn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.Available = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.borrow = new System.Windows.Forms.DataGridViewButtonColumn();
             this.groupBox1.SuspendLayout();
+            this.tipsPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bookList)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.tipsPanel);
             this.groupBox1.Controls.Add(this.isbnText);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.authorText);
@@ -69,6 +71,46 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Search Book";
+            // 
+            // tipsPanel
+            // 
+            this.tipsPanel.Controls.Add(this.label5);
+            this.tipsPanel.Controls.Add(this.label4);
+            this.tipsPanel.Controls.Add(this.label3);
+            this.tipsPanel.Location = new System.Drawing.Point(455, 19);
+            this.tipsPanel.Name = "tipsPanel";
+            this.tipsPanel.Size = new System.Drawing.Size(337, 88);
+            this.tipsPanel.TabIndex = 16;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(47, 56);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(269, 15);
+            this.label5.TabIndex = 15;
+            this.label5.Text = "Click on a cell and press delete to delete the row";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(47, 34);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(251, 15);
+            this.label4.TabIndex = 14;
+            this.label4.Text = "Click on a cell and press F12 to edit the value";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(35, 18);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(40, 16);
+            this.label3.TabIndex = 13;
+            this.label3.Text = "TIP: ";
             // 
             // isbnText
             // 
@@ -131,6 +173,7 @@
             // bookList
             // 
             this.bookList.AllowUserToAddRows = false;
+            this.bookList.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -142,18 +185,21 @@
             this.bookList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.bookList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.title,
+            this.availablebool,
             this.author,
             this.genre,
             this.isbn,
-            this.Column5,
-            this.ID});
+            this.ID,
+            this.Available,
+            this.borrow});
             this.bookList.Location = new System.Drawing.Point(4, 214);
             this.bookList.Name = "bookList";
             this.bookList.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bookList.RowTemplate.Height = 30;
-            this.bookList.Size = new System.Drawing.Size(879, 336);
+            this.bookList.Size = new System.Drawing.Size(924, 339);
             this.bookList.TabIndex = 1;
             this.bookList.CellBeginEdit += new System.Windows.Forms.DataGridViewCellCancelEventHandler(this.bookList_CellBeginEdit);
+            this.bookList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.bookList_CellContentClick);
             this.bookList.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.bookList_CellEndEdit);
             this.bookList.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.bookList_UserDeletingRow);
             // 
@@ -164,6 +210,13 @@
             this.title.HeaderText = "Title";
             this.title.Name = "title";
             this.title.Width = 200;
+            // 
+            // availablebool
+            // 
+            this.availablebool.DataPropertyName = "available";
+            this.availablebool.HeaderText = "available";
+            this.availablebool.Name = "availablebool";
+            this.availablebool.Visible = false;
             // 
             // author
             // 
@@ -186,12 +239,6 @@
             this.isbn.Name = "isbn";
             this.isbn.Width = 150;
             // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "";
-            this.Column5.Name = "Column5";
-            this.Column5.Text = "Borrow";
-            // 
             // ID
             // 
             this.ID.DataPropertyName = "ID";
@@ -199,47 +246,33 @@
             this.ID.Name = "ID";
             this.ID.Visible = false;
             // 
-            // label3
+            // Available
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(488, 39);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(40, 16);
-            this.label3.TabIndex = 13;
-            this.label3.Text = "TIP: ";
+            this.Available.DataPropertyName = "strAvailable";
+            this.Available.HeaderText = "Available";
+            this.Available.Name = "Available";
             // 
-            // label4
+            // borrow
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(500, 55);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(251, 15);
-            this.label4.TabIndex = 14;
-            this.label4.Text = "Click on a cell and press F12 to edit the value";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(500, 77);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(269, 15);
-            this.label5.TabIndex = 15;
-            this.label5.Text = "Click on a cell and press delete to delete the row";
+            this.borrow.HeaderText = "";
+            this.borrow.Name = "borrow";
+            this.borrow.Text = "Borrow";
+            this.borrow.UseColumnTextForButtonValue = true;
             // 
             // SearchBook
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(895, 562);
+            this.ClientSize = new System.Drawing.Size(957, 577);
             this.Controls.Add(this.bookList);
             this.Controls.Add(this.groupBox1);
             this.Name = "SearchBook";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SearchBook";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.tipsPanel.ResumeLayout(false);
+            this.tipsPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bookList)).EndInit();
             this.ResumeLayout(false);
 
@@ -256,14 +289,17 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox authorText;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn title;
-        private System.Windows.Forms.DataGridViewTextBoxColumn author;
-        private System.Windows.Forms.DataGridViewTextBoxColumn genre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn isbn;
-        private System.Windows.Forms.DataGridViewButtonColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Panel tipsPanel;
+        private System.Windows.Forms.DataGridViewTextBoxColumn title;
+        private System.Windows.Forms.DataGridViewTextBoxColumn availablebool;
+        private System.Windows.Forms.DataGridViewTextBoxColumn author;
+        private System.Windows.Forms.DataGridViewTextBoxColumn genre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn isbn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Available;
+        private System.Windows.Forms.DataGridViewButtonColumn borrow;
     }
 }

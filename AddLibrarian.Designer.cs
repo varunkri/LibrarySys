@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtUsername = new System.Windows.Forms.TextBox();
-            this.txtPassword = new System.Windows.Forms.TextBox();
-            this.Add = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.Add = new System.Windows.Forms.Button();
+            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.txtUsername = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -49,48 +49,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Add a New Librarian";
             // 
-            // txtUsername
-            // 
-            this.txtUsername.Location = new System.Drawing.Point(67, 73);
-            this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(403, 20);
-            this.txtUsername.TabIndex = 0;
-            // 
-            // txtPassword
-            // 
-            this.txtPassword.Location = new System.Drawing.Point(67, 119);
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(403, 20);
-            this.txtPassword.TabIndex = 1;
-            // 
-            // Add
-            // 
-            this.Add.Location = new System.Drawing.Point(213, 188);
-            this.Add.Name = "Add";
-            this.Add.Size = new System.Drawing.Size(102, 34);
-            this.Add.TabIndex = 2;
-            this.Add.Text = "Add";
-            this.Add.UseVisualStyleBackColor = true;
-            this.Add.Click += new System.EventHandler(this.Add_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 76);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(55, 13);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Username";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 122);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 13);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Password";
-            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.label2);
@@ -103,6 +61,48 @@
             this.panel1.Size = new System.Drawing.Size(556, 269);
             this.panel1.TabIndex = 3;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(6, 122);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(53, 13);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Password";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(6, 76);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(55, 13);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Username";
+            // 
+            // Add
+            // 
+            this.Add.Location = new System.Drawing.Point(213, 188);
+            this.Add.Name = "Add";
+            this.Add.Size = new System.Drawing.Size(102, 34);
+            this.Add.TabIndex = 2;
+            this.Add.Text = "Add";
+            this.Add.UseVisualStyleBackColor = true;
+            this.Add.Click += new System.EventHandler(this.Add_Click);
+            // 
+            // txtPassword
+            // 
+            this.txtPassword.Location = new System.Drawing.Point(67, 119);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(403, 20);
+            this.txtPassword.TabIndex = 1;
+            // 
+            // txtUsername
+            // 
+            this.txtUsername.Location = new System.Drawing.Point(67, 73);
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.Size = new System.Drawing.Size(403, 20);
+            this.txtUsername.TabIndex = 0;
+            // 
             // AddLibrarian
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -110,6 +110,7 @@
             this.ClientSize = new System.Drawing.Size(769, 527);
             this.Controls.Add(this.groupBox1);
             this.Name = "AddLibrarian";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddLibrarian";
             this.groupBox1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);

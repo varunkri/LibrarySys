@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using LibraryApp.Classes;
 
 namespace LibraryApp
 {
@@ -28,8 +29,16 @@ namespace LibraryApp
 
         private void button1_Click(object sender, EventArgs e)
         {
-            SearchBook searchBook = new SearchBook();
-            searchBook.Show();
+            CustomerControl myc = new CustomerControl();
+            bool authenticated = myc.checkCustomerPassword(cusEmail.Text, cusPassword.Text);
+            if(!authenticated)
+            {
+                MessageBox.Show(myc.Message);
+                return;
+            }
+            CustomerMenu myCustomerMenu = new CustomerMenu();
+            myCustomerMenu.Show();
+            this.Hide();
         }
 
 

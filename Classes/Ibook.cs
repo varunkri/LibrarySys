@@ -11,7 +11,7 @@ namespace LibraryApp.Classes
         bool deleteBook(int ID);
         List<Book> searchBook(string title, string author, string isbn);
         bool borrowBook(int ID, Customer borrower);
-        bool returnBook(int ID, Customer borrower);
-        bool renewBook(int ID, Customer borrower);
+        bool returnBook(int ID, Customer borrower,float penaltyImposed);
+        bool renewBook(int ID, Customer borrower, DateTime newDueDate);
     }
 }

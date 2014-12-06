@@ -12,10 +12,17 @@ namespace LibraryApp.Classes
         private string isbn;
         private string genre;
         private int ID;
+        private bool available;
+        private string strAvailable;
+        private string dueDate;
 
         public Book()
         {
 
+        }
+        public Book(int Id)
+        {
+            this.ID = Id;
         }
         public  Book(string isbn,string author,string title,string genre,int Id)
         {
@@ -51,6 +58,24 @@ namespace LibraryApp.Classes
         {
             get { return ID; }
             set { ID = value; }
+        }
+
+        public bool Available
+        {
+            get { return available; }
+            set { available = value; }
+        }
+
+        public string StrAvailable
+        {
+            get { return strAvailable; }
+            set { strAvailable = value; }
+        }
+
+        public string DueDate
+        {
+            get { return dueDate; }
+            set { dueDate = value; }
         }
 
 
@@ -96,6 +121,14 @@ namespace LibraryApp.Classes
                 b.isbn = dr["isbn"].ToString();
                 b.genre = dr["genre"].ToString();
                 b.Id = int.Parse(dr["id"].ToString());
+                b.available = (dr["available"].ToString() == "1");
+                if (b.available)
+                    b.strAvailable = "YES";
+                else
+                {
+                    b.strAvailable = "Available on " + dr["dueDate"].ToString();
+                    b.dueDate = dr["dueDate"].ToString();
+                }
                 bkList.Add(b);
 
             }
@@ -103,15 +136,18 @@ namespace LibraryApp.Classes
         }
         public bool borrowBook(int ID, Customer borrower)
         {
-            throw new NotImplementedException();
+            Database db = Database.Instance;
+            return db.borrowBook(Id, borrower.Id);
         }
-        public bool returnBook(int ID, Customer borrower)
+        public bool returnBook(int ID, Customer borrower,float penaltyImposed)
         {
-            throw new NotImplementedException();
+            Database db = Database.Instance;
+            return db.returnBook(ID, borrower, penaltyImposed);
         }
-        public bool renewBook(int ID, Customer borrower)
+        public bool renewBook(int ID, Customer borrower, DateTime newDueDate)
         {
-            throw new NotImplementedException();
+            Database db = Database.Instance;
+            return db.renewBook(ID, borrower, newDueDate);
         }
 
       

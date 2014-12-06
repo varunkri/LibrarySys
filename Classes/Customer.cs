@@ -11,6 +11,7 @@ namespace LibraryApp.Classes
         private string password;
         private string idnum;
         private string phone;
+        private string email;
         private int ID;
         public Customer()
         {
@@ -48,15 +49,30 @@ namespace LibraryApp.Classes
             set { ID = value; }
         }
 
+        public string Phone
+        {
+            get { return phone; }
+            set { phone = value; }
+        }
+
+        public string Email
+        {
+            get { return email; }
+            set { email = value; }
+        }
+
         #region Icustomer Members
 
-        public bool addCustomer(string userName, string password)
+        public bool addCustomer(string name, string idNumber, string phone, string email, string password)
         {
             Database db = Database.Instance;
-            this.username = userName;
             this.password = password;
-          //  return db.addCustomer(this);
-            throw new NotImplementedException();
+            this.name = name;
+            this.idnum = idNumber;
+            this.phone = phone;
+            this.email = email;
+            return db.addCustomer(this);
+           
         }
         public bool editPassword(int ID, string existingPassword, string newPassword)
         {
@@ -78,14 +94,8 @@ namespace LibraryApp.Classes
         {
             throw new NotImplementedException();
         }
-        #endregion
+   
 
-        #region Icustomer Members
-
-        bool Icustomer.addCustomer(string name, string idNumber, string phone, string userName, string password)
-        {
-            throw new NotImplementedException();
-        }
 
         bool Icustomer.editPassword(int ID, string existingPassword, string newPassword)
         {

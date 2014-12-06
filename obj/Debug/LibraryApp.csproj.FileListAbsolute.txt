@@ -40,3 +40,6 @@ C:\Users\Chen\Documents\GitHub\LibrarySys\bin\Debug\LibraryApp.application
 C:\Users\Chen\Documents\GitHub\LibrarySys\obj\Debug\LibraryApp.exe.manifest
 C:\Users\Chen\Documents\GitHub\LibrarySys\obj\Debug\LibraryApp.application
 C:\Users\Chen\Documents\GitHub\LibrarySys\obj\Debug\LibraryApp.CustomerReg.resources
+E:\Dev\LibraryApp\obj\Debug\LibraryApp.CustomerReg.resources
+E:\Dev\LibraryApp\obj\Debug\LibraryApp.CustomerMenu.resources
+E:\Dev\LibraryApp\obj\Debug\LibraryApp.CustBooksBorrowed.resources

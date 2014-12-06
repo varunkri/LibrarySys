@@ -140,6 +140,7 @@
             this.ClientSize = new System.Drawing.Size(784, 562);
             this.Controls.Add(this.groupBox1);
             this.Name = "AddBook";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddBook";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

@@ -211,6 +211,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.welcomLabel);
             this.Name = "WelcomePage";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "WelcomePage";
             this.Load += new System.EventHandler(this.WelcomePage_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

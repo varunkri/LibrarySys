@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Text;
 
 namespace LibraryApp.Classes
@@ -8,9 +9,71 @@ namespace LibraryApp.Classes
     {
         public string Message;
         private bool success = false;
+        private static readonly int maxBorrowLimit = 5;
 
         public BookControl()
         {
+
+        }
+       
+
+        public bool renewBook(int bookID, int custID, DateTime newDueDate)
+        {
+            Book b = new Book();
+            Customer borrower = new Customer(custID);
+            if (b.renewBook(bookID, borrower, newDueDate))
+            {
+                success = true;
+                Message = "Your due date for this book book has been extended by a week.";
+            }
+            else
+            {
+                Message = "An error occurred.";
+            }
+            return success;
+
+        }
+
+        public bool returnBook(int bookID, int custID, float penaltyImposed)
+        {
+            Book b = new Book();
+            Customer borrower = new Customer(custID);
+            if (b.returnBook(bookID, borrower, penaltyImposed))
+            {
+                success = true;
+                Message = "Thank you for returning the book.";
+            }
+            else
+            {
+                Message = "An error occurred.";
+            }
+            return success;
+            
+        }
+
+        public bool borrowBook(int bookID, int custID)
+        {
+            Database mydb = Database.Instance;
+            int borrowed = mydb.getBooksBorrowedCountByCustomer(custID);
+            if(borrowed >= 5)
+            {
+                Message = "You have already borrowed 5 books. You may not borrow more at this moment. ";
+                return false;
+            }
+
+            Customer borrower = new Customer(custID);
+            Book myBook = new Book(bookID);
+
+            if (myBook.borrowBook(bookID, borrower))
+            {
+                success = true;
+                Message = "Than you for using the library. You may return this book within a week. You have a limit of " + (maxBorrowLimit - borrowed - 1).ToString() + " book(s) that you may borrow";
+            }
+            else
+            {
+                Message = "An error occurred.";
+            }
+            return success;
 
         }
 

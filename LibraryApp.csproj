@@ -105,6 +105,19 @@
     <Compile Include="Classes\Ilibrarian.cs" />
     <Compile Include="Classes\Librarian.cs" />
     <Compile Include="Classes\LibrarianControl.cs" />
+    <Compile Include="Classes\LoginInfo.cs" />
+    <Compile Include="CustBooksBorrowed.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustBooksBorrowed.Designer.cs">
+      <DependentUpon>CustBooksBorrowed.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerMenu.Designer.cs">
+      <DependentUpon>CustomerMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="CustomerReg.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -136,6 +149,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AddLibrarian.resx">
       <DependentUpon>AddLibrarian.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustBooksBorrowed.resx">
+      <DependentUpon>CustBooksBorrowed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerMenu.resx">
+      <DependentUpon>CustomerMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CustomerReg.resx">
       <DependentUpon>CustomerReg.cs</DependentUpon>
