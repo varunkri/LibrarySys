@@ -33,5 +33,11 @@ namespace LibraryApp
             SearchBook sb = new SearchBook();
             sb.Show();
         }
+
+        private void blBtn_Click(object sender, EventArgs e)
+        {
+            Blacklist myBl = new Blacklist();
+            myBl.Show();
+        }
     }
 }

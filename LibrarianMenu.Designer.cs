@@ -108,6 +108,7 @@
             this.blBtn.TabStop = false;
             this.blBtn.Text = "Blacklist Customer";
             this.blBtn.UseVisualStyleBackColor = true;
+            this.blBtn.Click += new System.EventHandler(this.blBtn_Click);
             // 
             // LibrarianMenu
             // 
