@@ -13,6 +13,8 @@ namespace LibraryApp.Classes
         private string phone;
         private string email;
         private int ID;
+        private bool blacklisted;
+
         public Customer()
         {
         }
@@ -61,6 +63,12 @@ namespace LibraryApp.Classes
             set { email = value; }
         }
 
+        public bool Blacklisted
+        {
+            get { return blacklisted; }
+            set { blacklisted = value; }
+        }
+
         #region Icustomer Members
 
         public bool addCustomer(string name, string idNumber, string phone, string email, string password)
@@ -82,9 +90,11 @@ namespace LibraryApp.Classes
           //  return db.editPassword(this);
             throw new NotImplementedException();
         }
-        public void blackListCustomer(int ID)
+        public bool blackListCustomer(int ID)
         {
-            throw new NotImplementedException();
+            Database db = Database.Instance;
+            this.blacklisted = true;
+            return db.blacklistCustomer(this);
         }
         public int getBooksBorrowedCount(int ID)
         {

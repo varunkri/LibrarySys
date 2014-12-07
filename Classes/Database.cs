@@ -145,6 +145,17 @@ namespace LibraryApp.Classes
            return true;
        }
 
+       public bool blacklistCustomer(Customer c)
+       {
+           SqlCeCommand sqlSt = new SqlCeCommand();
+           sqlSt.CommandText =
+               "Update Customer set [blacklist] = @blacklist" + "WHERE ID= @ID";
+
+           sqlSt.Parameters.Add(new SqlCeParameter("blacklisted", c.Blacklisted));
+           bool success = runCommand(sqlSt);
+           return success;
+       }
+
         public  DataTable searchBook(string title, string author, string isbn)
         {
             SqlCeCommand sqlSt = new SqlCeCommand();

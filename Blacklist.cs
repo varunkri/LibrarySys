@@ -17,11 +17,6 @@ namespace LibraryApp
             InitializeComponent();
         }
 
-        private void bookList_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void customerBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
             this.Validate();
@@ -34,7 +29,14 @@ namespace LibraryApp
         {
             // TODO: This line of code loads data into the 'libraryAppDataSet.customer' table. You can move, or remove it, as needed.
             this.customerTableAdapter.Fill(this.libraryAppDataSet.customer);
-            this.dataGridViewCheckBoxColumn1.ReadOnly = false;
+        }
+
+        private void blacklistTable_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string ID = this.blacklistTable.Rows[e.RowIndex].Cells["Id"].Value.ToString();
+            Customer cus = new Customer();
+            cus.blackListCustomer(int.Parse(ID));
+            this.customerTableAdapter.Fill(this.libraryAppDataSet.customer);
         }
     }
 }
