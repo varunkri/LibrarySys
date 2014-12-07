@@ -34,7 +34,7 @@ namespace LibraryApp
         {
             // TODO: This line of code loads data into the 'libraryAppDataSet.customer' table. You can move, or remove it, as needed.
             this.customerTableAdapter.Fill(this.libraryAppDataSet.customer);
-
+            this.dataGridViewCheckBoxColumn1.ReadOnly = false;
         }
     }
 }
