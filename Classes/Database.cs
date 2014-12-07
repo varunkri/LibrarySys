@@ -149,7 +149,7 @@ namespace LibraryApp.Classes
        {
            SqlCeCommand sqlSt = new SqlCeCommand();
            sqlSt.CommandText =
-               "Update Customer set [blacklist] = @blacklist" + "WHERE ID= @ID";
+               "Update Customer set [blacklisted] = @blacklisted" + "WHERE ID= @ID";
 
            sqlSt.Parameters.Add(new SqlCeParameter("blacklisted", c.Blacklisted));
            bool success = runCommand(sqlSt);

@@ -30,10 +30,10 @@
         {
             this.addLibBtn = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.blBtn = new System.Windows.Forms.Button();
             this.reportsBtn = new System.Windows.Forms.Button();
             this.searchBookBtn = new System.Windows.Forms.Button();
             this.addBookBtn = new System.Windows.Forms.Button();
-            this.blBtn = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -62,6 +62,18 @@
             this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Librarian Menu";
+            // 
+            // blBtn
+            // 
+            this.blBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.blBtn.Location = new System.Drawing.Point(224, 320);
+            this.blBtn.Name = "blBtn";
+            this.blBtn.Size = new System.Drawing.Size(218, 37);
+            this.blBtn.TabIndex = 4;
+            this.blBtn.TabStop = false;
+            this.blBtn.Text = "Customer list";
+            this.blBtn.UseVisualStyleBackColor = true;
+            this.blBtn.Click += new System.EventHandler(this.blBtn_Click);
             // 
             // reportsBtn
             // 
@@ -97,18 +109,6 @@
             this.addBookBtn.Text = "Add a book";
             this.addBookBtn.UseVisualStyleBackColor = true;
             this.addBookBtn.Click += new System.EventHandler(this.addBookBtn_Click);
-            // 
-            // blBtn
-            // 
-            this.blBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.blBtn.Location = new System.Drawing.Point(224, 320);
-            this.blBtn.Name = "blBtn";
-            this.blBtn.Size = new System.Drawing.Size(218, 37);
-            this.blBtn.TabIndex = 4;
-            this.blBtn.TabStop = false;
-            this.blBtn.Text = "Blacklist Customer";
-            this.blBtn.UseVisualStyleBackColor = true;
-            this.blBtn.Click += new System.EventHandler(this.blBtn_Click);
             // 
             // LibrarianMenu
             // 
