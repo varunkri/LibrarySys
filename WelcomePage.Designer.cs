@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WelcomePage));
             this.welcomLabel = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.libLogin = new System.Windows.Forms.Button();
             this.cusEmail = new System.Windows.Forms.TextBox();
             this.newCustomerLabel = new System.Windows.Forms.Label();
             this.cusPassword = new System.Windows.Forms.TextBox();
@@ -71,19 +71,19 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
-            // button1
+            // libLogin
             // 
-            this.button1.Location = new System.Drawing.Point(235, 149);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "Login";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.libLogin.Location = new System.Drawing.Point(235, 149);
+            this.libLogin.Name = "libLogin";
+            this.libLogin.Size = new System.Drawing.Size(75, 23);
+            this.libLogin.TabIndex = 9;
+            this.libLogin.Text = "Login";
+            this.libLogin.UseVisualStyleBackColor = true;
+            this.libLogin.Click += new System.EventHandler(this.button1_Click);
             // 
             // cusEmail
             // 
-            this.cusEmail.ForeColor = System.Drawing.Color.Gray;
+            this.cusEmail.ForeColor = System.Drawing.Color.Black;
             this.cusEmail.Location = new System.Drawing.Point(6, 58);
             this.cusEmail.Name = "cusEmail";
             this.cusEmail.Size = new System.Drawing.Size(304, 20);
@@ -103,7 +103,7 @@
             // 
             // cusPassword
             // 
-            this.cusPassword.ForeColor = System.Drawing.Color.Gray;
+            this.cusPassword.ForeColor = System.Drawing.Color.Black;
             this.cusPassword.Location = new System.Drawing.Point(6, 110);
             this.cusPassword.Name = "cusPassword";
             this.cusPassword.Size = new System.Drawing.Size(304, 20);
@@ -115,7 +115,7 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.cusEmail);
             this.groupBox1.Controls.Add(this.cusPassword);
-            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.libLogin);
             this.groupBox1.Controls.Add(this.newCustomerLabel);
             this.groupBox1.Location = new System.Drawing.Point(50, 282);
             this.groupBox1.Name = "groupBox1";
@@ -182,10 +182,11 @@
             this.button2.TabIndex = 13;
             this.button2.Text = "Login";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // libUsername
             // 
-            this.libUsername.ForeColor = System.Drawing.Color.Gray;
+            this.libUsername.ForeColor = System.Drawing.Color.Black;
             this.libUsername.Location = new System.Drawing.Point(6, 58);
             this.libUsername.Name = "libUsername";
             this.libUsername.Size = new System.Drawing.Size(304, 20);
@@ -193,7 +194,7 @@
             // 
             // libPassword
             // 
-            this.libPassword.ForeColor = System.Drawing.Color.Gray;
+            this.libPassword.ForeColor = System.Drawing.Color.Black;
             this.libPassword.Location = new System.Drawing.Point(6, 110);
             this.libPassword.Name = "libPassword";
             this.libPassword.Size = new System.Drawing.Size(304, 20);
@@ -228,7 +229,7 @@
 
         private System.Windows.Forms.Label welcomLabel;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button libLogin;
         private System.Windows.Forms.TextBox cusEmail;
         private System.Windows.Forms.Label newCustomerLabel;
         private System.Windows.Forms.TextBox cusPassword;

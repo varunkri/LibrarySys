@@ -43,3 +43,5 @@ C:\Users\Chen\Documents\GitHub\LibrarySys\obj\Debug\LibraryApp.CustomerReg.resou
 E:\Dev\LibraryApp\obj\Debug\LibraryApp.CustomerReg.resources
 E:\Dev\LibraryApp\obj\Debug\LibraryApp.CustomerMenu.resources
 E:\Dev\LibraryApp\obj\Debug\LibraryApp.CustBooksBorrowed.resources
+C:\Users\Chen\Documents\GitHub\LibrarySys\obj\Debug\LibraryApp.CustBooksBorrowed.resources
+C:\Users\Chen\Documents\GitHub\LibrarySys\obj\Debug\LibraryApp.CustomerMenu.resources

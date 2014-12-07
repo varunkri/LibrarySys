@@ -33,13 +33,14 @@
             this.reportsBtn = new System.Windows.Forms.Button();
             this.searchBookBtn = new System.Windows.Forms.Button();
             this.addBookBtn = new System.Windows.Forms.Button();
+            this.blBtn = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // addLibBtn
             // 
             this.addLibBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addLibBtn.Location = new System.Drawing.Point(224, 61);
+            this.addLibBtn.Location = new System.Drawing.Point(224, 46);
             this.addLibBtn.Name = "addLibBtn";
             this.addLibBtn.Size = new System.Drawing.Size(218, 37);
             this.addLibBtn.TabIndex = 0;
@@ -50,6 +51,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.blBtn);
             this.groupBox1.Controls.Add(this.reportsBtn);
             this.groupBox1.Controls.Add(this.searchBookBtn);
             this.groupBox1.Controls.Add(this.addBookBtn);
@@ -64,7 +66,7 @@
             // reportsBtn
             // 
             this.reportsBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.reportsBtn.Location = new System.Drawing.Point(224, 274);
+            this.reportsBtn.Location = new System.Drawing.Point(224, 207);
             this.reportsBtn.Name = "reportsBtn";
             this.reportsBtn.Size = new System.Drawing.Size(218, 37);
             this.reportsBtn.TabIndex = 3;
@@ -75,7 +77,7 @@
             // searchBookBtn
             // 
             this.searchBookBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchBookBtn.Location = new System.Drawing.Point(224, 205);
+            this.searchBookBtn.Location = new System.Drawing.Point(224, 155);
             this.searchBookBtn.Name = "searchBookBtn";
             this.searchBookBtn.Size = new System.Drawing.Size(218, 37);
             this.searchBookBtn.TabIndex = 2;
@@ -87,7 +89,7 @@
             // addBookBtn
             // 
             this.addBookBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addBookBtn.Location = new System.Drawing.Point(224, 131);
+            this.addBookBtn.Location = new System.Drawing.Point(224, 100);
             this.addBookBtn.Name = "addBookBtn";
             this.addBookBtn.Size = new System.Drawing.Size(218, 37);
             this.addBookBtn.TabIndex = 1;
@@ -95,6 +97,17 @@
             this.addBookBtn.Text = "Add a book";
             this.addBookBtn.UseVisualStyleBackColor = true;
             this.addBookBtn.Click += new System.EventHandler(this.addBookBtn_Click);
+            // 
+            // blBtn
+            // 
+            this.blBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.blBtn.Location = new System.Drawing.Point(224, 320);
+            this.blBtn.Name = "blBtn";
+            this.blBtn.Size = new System.Drawing.Size(218, 37);
+            this.blBtn.TabIndex = 4;
+            this.blBtn.TabStop = false;
+            this.blBtn.Text = "Blacklist Customer";
+            this.blBtn.UseVisualStyleBackColor = true;
             // 
             // LibrarianMenu
             // 
@@ -117,5 +130,6 @@
         private System.Windows.Forms.Button searchBookBtn;
         private System.Windows.Forms.Button addBookBtn;
         private System.Windows.Forms.Button reportsBtn;
+        private System.Windows.Forms.Button blBtn;
     }
 }

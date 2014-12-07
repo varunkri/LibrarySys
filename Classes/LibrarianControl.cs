@@ -13,6 +13,21 @@ namespace LibraryApp.Classes
             
         }
 
+        public bool checkLibrarianPassword(string username, string password)
+        {
+            Database mydb = Database.Instance;
+            int ID = mydb.checkLibrarianPassword(username, password);
+            if (ID == 0)
+            {
+                Message = "The login information you entered was incorrect.";
+                return false;
+            }
+
+            LoginInfo.LoggedInId = ID;
+            LoginInfo.LibrarianLoggedIn= true;
+            return true;
+        }
+
         public  bool addNewLibrarin(string username, string password)
         {
             //check if librarian exists

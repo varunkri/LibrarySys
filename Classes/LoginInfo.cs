@@ -24,5 +24,11 @@ namespace LibraryApp.Classes
             get { return customerLoggedIn; }
             set { customerLoggedIn = value; }
         }
+
+        public static bool LibrarianLoggedIn
+        {
+            get { return LibrarianLoggedIn; }
+            set { LibrarianLoggedIn = value; }
+        }
     }
 }

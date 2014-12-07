@@ -102,6 +102,17 @@ namespace LibraryApp.Classes
             return ID;
         }
 
+        public int checkLibrarianPassword(string username, string password)
+        {
+            SqlCeCommand sqlSt = new SqlCeCommand();
+            sqlSt.CommandText = "select * from librarian where username='" + username + "' and password='" + password + "'";
+            DataTable dt = readTable(sqlSt);
+            int ID = 0;
+            if (dt.Rows.Count > 0)
+                ID = int.Parse(dt.Rows[0]["ID"].ToString());
+            return ID;
+        }
+
        public bool doesCustomerExist(string Idnum)
         {
             SqlCeCommand sqlSt = new SqlCeCommand();

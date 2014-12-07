@@ -41,6 +41,20 @@ namespace LibraryApp
             this.Hide();
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            //LibrarianControl myLib = new LibrarianControl();
+            //bool authenticated = myLib.checkLibrarianPassword(libUsername.Text, libPassword.Text);
+            //if (!authenticated)
+            //{
+            //    MessageBox.Show(myLib.Message);
+            //    return;
+            //}
+            LibrarianMenu myLibrarianMenu = new LibrarianMenu();
+            myLibrarianMenu.Show();
+            this.Hide();
+        }
+
 
     }
 }
