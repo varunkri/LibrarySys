@@ -46,3 +46,4 @@ E:\Dev\LibraryApp\obj\Debug\LibraryApp.CustBooksBorrowed.resources
 C:\Users\Chen\Documents\GitHub\LibrarySys\obj\Debug\LibraryApp.CustBooksBorrowed.resources
 C:\Users\Chen\Documents\GitHub\LibrarySys\obj\Debug\LibraryApp.CustomerMenu.resources
 C:\Users\Chen\Documents\GitHub\LibrarySys\obj\Debug\LibraryApp.Blacklist.resources
+E:\Dev\LibraryApp\obj\Debug\LibraryApp.Blacklist.resources

@@ -9,6 +9,7 @@ namespace LibraryApp.Classes
     {
         private static int loggedInID;
         private static bool customerLoggedIn;
+        private static bool librarianLoggedIn;
 
 
        
@@ -27,8 +28,8 @@ namespace LibraryApp.Classes
 
         public static bool LibrarianLoggedIn
         {
-            get { return LibrarianLoggedIn; }
-            set { LibrarianLoggedIn = value; }
+            get { return librarianLoggedIn; }
+            set { librarianLoggedIn = value; }
         }
     }
 }
